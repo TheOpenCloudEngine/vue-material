@@ -5,7 +5,7 @@
         <h2 class="md-headline">Author</h2>
         <div class="author-card">
         <md-avatar class="md-large">
-                      <img src="https://avatars0.githubusercontent.com/u/487999?v=3&s=460" alt=“Rick Jang">
+                      <img src="https://avatars0.githubusercontent.com/u/487999?v=3&s=460" alt="Rick Jang">
                     </md-avatar>
           <div class="author-card-info">
 

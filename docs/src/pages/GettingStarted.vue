@@ -85,7 +85,8 @@
 
 &lt;/script&gt;
           </code-block>
-
+        </section>
+      </article>
 
     </div>
   </page-content>

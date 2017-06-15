@@ -1,5 +1,5 @@
 <template>
-  <page-content page-title="Components - Object Grid">
+  <page-content page-title="MSAComponents - Object Grid">
     <docs-component>
       <div slot="description">
         <p>메타데이터 서비스에서 얻어온 객체 정보를 기반으로 컬럼을 자동 구성하고 Spring Hateoas 와 JPA 를 통하여 자동으로 CRUD를 수행하는 그리드 컴포넌트입니다.</p>

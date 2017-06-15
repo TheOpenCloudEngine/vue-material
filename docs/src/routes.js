@@ -37,6 +37,10 @@ const Toolbar = (r) => require.ensure([], () => r(require('./pages/components/To
 const Tooltip = (r) => require.ensure([], () => r(require('./pages/components/Tooltip')), 'tooltip');
 const Whiteframe = (r) => require.ensure([], () => r(require('./pages/components/Whiteframe')), 'whiteframe');
 
+/* MSAComponents*/
+const ObjectGrid = (r) => require.ensure([], () => r(require('./pages/msacomponents/ObjectGrid')), 'objectgrid');
+const ObjectForm = (r) => require.ensure([], () => r(require('./pages/msacomponents/ObjectForm')), 'objectform');
+
 /* UI Elements */
 const Typography = (r) => require.ensure([], () => r(require('./pages/ui-elements/Typography')), 'ui-elements');
 const Layout = (r) => require.ensure([], () => r(require('./pages/ui-elements/Layout')), 'ui-elements');
@@ -226,6 +230,24 @@ const components = [
   }
 ];
 
+const msacomponents = [
+  {
+    path: '/msacomponents',
+    name: 'msacomponents',
+    redirect: '/msacomponents/ObjectGrid'
+  },
+  {
+    path: '/msacomponents/ObjectGrid',
+    name: 'msacomponents:ObjectGrid',
+    component: ObjectGrid
+  },
+  {
+    path: '/msacomponents/ObjectForm',
+    name: 'msacomponents:ObjectForm',
+    component: ObjectForm
+  }
+];
+
 const theme = [
   {
     path: '/themes',
@@ -270,4 +292,4 @@ const error = [
   }
 ];
 
-export default [].concat(main, components, theme, uiElements, error);
+export default [].concat(main, components, msacomponents, theme, uiElements, error);
