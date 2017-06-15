@@ -4,7 +4,7 @@
       <md-toolbar class="vue-material-logo" md-theme="white">
         <router-link exact to="/">
           <img :src="logo" alt="Vue">
-          <span>Vue Material</span>
+          <span>Metaworks4</span>
         </router-link>
       </md-toolbar>
 
@@ -29,6 +29,39 @@
 
                 <md-list-item class="md-inset">
                   <router-link exact to="/themes/dynamic-themes">Dynamic Theme</router-link>
+                </md-list-item>
+              </md-list>
+            </md-list-expand>
+          </md-list-item>
+
+         <md-list-item>
+
+            <span>MSA Components</span>
+
+            <md-list-expand>
+              <md-list>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/msacomponents/objectgrid">Object Grid</router-link>
+                </md-list-item>
+
+                <md-list-item class="md-inset">
+                  <router-link exact to="/msacomponents/objectform">Object Form</router-link>
+                </md-list-item>
+
+                <md-list-item class="md-inset">
+                  <router-link exact to="/components/card">IAM Login</router-link>
+                </md-list-item>
+
+                <md-list-item class="md-inset">
+                  <router-link exact to="/components/chips">IAM Menu</router-link>
+                </md-list-item>
+
+                <md-list-item class="md-inset">
+                  <router-link exact to="/components/file">Self Service Portal</router-link>
+                </md-list-item>
+
+                <md-list-item class="md-inset">
+                  <router-link exact to="/components/icon">Self Service Mashup</router-link>
                 </md-list-item>
               </md-list>
             </md-list-expand>
@@ -178,7 +211,33 @@
           </md-list-item>
 
           <md-list-item>
-            <router-link exact to="/changelog">Changelog</router-link>
+            <span>Annotations</span>
+            <md-list-expand>
+              <md-list>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/ui-elements/layout">Layout</router-link>
+                </md-list-item>
+
+                <md-list-item class="md-inset">
+                  <router-link exact to="/ui-elements/typography">Typography</router-link>
+                </md-list-item>
+              </md-list>
+            </md-list-expand>
+          </md-list-item>
+
+          <md-list-item>
+            <span>MSA Patterns</span>
+            <md-list-expand>
+              <md-list>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/ui-elements/layout">Layout</router-link>
+                </md-list-item>
+
+                <md-list-item class="md-inset">
+                  <router-link exact to="/ui-elements/typography">Typography</router-link>
+                </md-list-item>
+              </md-list>
+            </md-list-expand>
           </md-list-item>
 
           <md-list-item>
@@ -400,7 +459,7 @@
         let theme = Vue.material.currentTheme;
 
         if (theme) {
-          return `assets/logo-vue-material-${theme}.png`;
+          return 'assets/metaworks4.png';
         }
 
         return 'assets/logo-vue-material-default.png';

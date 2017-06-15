@@ -291,7 +291,8 @@ public class Product implements BeforeSave, AfterLoad {
 }
 
           </code-block>
-
+        </section>
+      </article>
 
         </section>
 
