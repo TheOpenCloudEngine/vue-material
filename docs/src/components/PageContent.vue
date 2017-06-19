@@ -64,7 +64,7 @@
       }
     },
     mounted() {
-      document.title = this.pageTitle + ' - Vue Material';
+      document.title = this.pageTitle + ' - Metaworks4';
     }
   };
 </script>
