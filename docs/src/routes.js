@@ -1,6 +1,7 @@
 /* Root */
 const Introduction = (r) => require.ensure([], () => r(require('./pages/Introduction')), 'base');
 const GettingStarted = (r) => require.ensure([], () => r(require('./pages/GettingStarted')), 'base');
+const JPAManual = (r) => require.ensure([], () => r(require('./pages/JPAManual')), 'base');
 const About = (r) => require.ensure([], () => r(require('./pages/About')), 'base');
 const Changelog = (r) => require.ensure([], () => r(require('./pages/Changelog')), 'base');
 const Error404 = (r) => require.ensure([], () => r(require('./pages/Error')), 'base');
@@ -40,6 +41,19 @@ const Whiteframe = (r) => require.ensure([], () => r(require('./pages/components
 /* MSAComponents*/
 const ObjectGrid = (r) => require.ensure([], () => r(require('./pages/msacomponents/ObjectGrid')), 'objectgrid');
 const ObjectForm = (r) => require.ensure([], () => r(require('./pages/msacomponents/ObjectForm')), 'objectform');
+const IAMLogin = (r) => require.ensure([], () => r(require('./pages/msacomponents/IAMLogin')), 'iam-login');
+const ReferencePicker = (r) => require.ensure([], () => r(require('./pages/msacomponents/ReferencePicker')), 'reference-picker');
+
+/* Annotations*/
+const Face = (r) => require.ensure([], () => r(require('./pages/annotations/Face')), 'face');
+const Order = (r) => require.ensure([], () => r(require('./pages/annotations/Order')), 'order');
+const ServiceMethod = (r) => require.ensure([], () => r(require('./pages/annotations/ServiceMethod')), 'service-method');
+const Id = (r) => require.ensure([], () => r(require('./pages/annotations/Id')), 'id');
+const Children = (r) => require.ensure([], () => r(require('./pages/annotations/Children')), 'children');
+const Name = (r) => require.ensure([], () => r(require('./pages/annotations/Name')), 'name');
+const Entity = (r) => require.ensure([], () => r(require('./pages/annotations/Entity')), 'entity');
+const JoinColumn = (r) => require.ensure([], () => r(require('./pages/annotations/JoinColumn')), 'join-column');
+const Multitenant = (r) => require.ensure([], () => r(require('./pages/annotations/Multitenant')), 'multitenant');
 
 /* UI Elements */
 const Typography = (r) => require.ensure([], () => r(require('./pages/ui-elements/Typography')), 'ui-elements');
@@ -59,6 +73,11 @@ const main = [
     path: '/getting-started',
     name: 'getting-started',
     component: GettingStarted
+  },
+  {
+    path: '/jpa-manual',
+    name: 'jpa-manual',
+    component: JPAManual
   },
   {
     path: '/about',
@@ -245,8 +264,80 @@ const msacomponents = [
     path: '/msacomponents/ObjectForm',
     name: 'msacomponents:ObjectForm',
     component: ObjectForm
+  },
+  {
+    path: '/msacomponents/iam-login',
+    name: 'msacomponents:IAMLogin',
+    component: IAMLogin
+  },
+  {
+    path: '/msacomponents/reference-picker',
+    name: 'msacomponents:ReferencePicker',
+    component: ReferencePicker
   }
+
 ];
+
+const annotations = [
+  {
+    path: '/annotations',
+    name: 'annotations',
+    redirect: '/annotations/face'
+  },
+  {
+    path: '/annotations/face',
+    name: 'annotations:@Face',
+    component: Face
+  },
+  {
+    path: '/annotations/service-method',
+    name: 'annotations:@serviceMethod',
+    component: ServiceMethod
+  },
+
+  {
+    path: '/annotations/order',
+    name: 'annotations:@Order',
+    component: Order
+  },
+
+  {
+    path: '/annotations/id',
+    name: 'annotations:@Id',
+    component: Id
+  },
+
+  {
+    path: '/annotations/name',
+    name: 'annotations:@Name',
+    component: Name
+  },
+
+
+  {
+    path: '/annotations/children',
+    name: 'annotations:@Children',
+    component: Children
+  },
+  {
+    path: '/annotations/entity',
+    name: 'annotations:@Entity',
+    component: Entity
+  },
+  {
+    path: '/annotations/multitenant',
+    name: 'annotations:@Multitenant',
+    component: Multitenant
+  },
+  {
+    path: '/annotations/join-column',
+    name: 'annotations:@JoinColumn',
+    component: JoinColumn
+  }
+
+
+];
+
 
 const theme = [
   {
@@ -292,4 +383,4 @@ const error = [
   }
 ];
 
-export default [].concat(main, components, msacomponents, theme, uiElements, error);
+export default [].concat(main, components, msacomponents, theme, annotations, uiElements, error);

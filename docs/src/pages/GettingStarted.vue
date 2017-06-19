@@ -230,30 +230,30 @@ public class Product implements BeforeSave, AfterLoad {
         }
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
-    List<Property> props;
+    List&lt;Property&gt; props;
         @Hidden
-        public List<Property> getProps() {
+        public List&lt;Property&gt; getProps() {
             return props;
         }
-        public void setProps(List<Property> props) {
+        public void setProps(List&lt;Property&gt; props) {
             this.props = props;
         }
 
 
     @Transient
-    Map<String, String> props_;
+    Map&lt;String, String&gt; props_;
         @JsonAnyGetter
         @Hidden
-        public Map<String, String> getProps_() {
+        public Map&lt;String, String&gt; getProps_() {
             return props_;
         }
-        public void setProps_(Map<String, String> props_) {
+        public void setProps_(Map&lt;String, String&gt; props_) {
             this.props_ = props_;
         }
         @JsonAnySetter
         public void addProps_(String key, String value) {
             if(this.props_ == null)
-                this.props_ = new HashMap<String, String>();
+                this.props_ = new HashMap&lt;String, String&gt;();
 
             this.props_.put(key, value);
         }
@@ -263,7 +263,7 @@ public class Product implements BeforeSave, AfterLoad {
     public void beforeSave() {
 
         if(getProps_()!=null){
-            setProps(new ArrayList<Property>());
+            setProps(new ArrayList&lt;Property&gt;());
 
             for(String key : getProps_().keySet()){
                 Property property = new Property();
@@ -281,7 +281,7 @@ public class Product implements BeforeSave, AfterLoad {
     @Override
     public void afterLoad() {
         if(getProps()!=null){
-            setProps_(new HashMap<String, String>());
+            setProps_(new HashMap&lt;String, String&gt;());
 
             for(Property property : getProps()){
                 getProps_().put(property.getPropName(), property.getValue());
@@ -310,7 +310,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.List;
 
 @RepositoryRestResource(collectionResourceRel = "product", path = "product")
-public interface ProductRepository extends MetaworksRepository<Product, Long> {
+public interface ProductRepository extends MetaworksRepository&lt;Product, Long&gt; {
 }
 
 

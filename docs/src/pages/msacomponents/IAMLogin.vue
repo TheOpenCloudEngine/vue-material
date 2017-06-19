@@ -1,12 +1,12 @@
 <template>
-  <page-content page-title="MSAComponents - Object Form">
+  <page-content page-title="MSAComponents - IAM Login">
     <docs-component>
       <div slot="description">
-        <p>메타데이터 서비스에서 얻어온 객체 정보를 기반으로 입력폼을 자동 구성하고 Spring Hateoas 와 JPA 를 통하여 자동으로 CRUD를 수행하는 폼 컴포넌트입니다.</p>
+        <p>로그인 UI 와 함께 IAM 서버로 로그인하여 JWT 토큰을 자동으로 발급한 후, 이후 모든 AJAX 호출에 헤더를 자동으로 주입하는 컴포넌트. </p>
       </div>
 
       <div slot="api">
-        <api-table name="object-form">
+        <api-table name="iam-login">
           <md-table slot="properties">
             <md-table-header>
               <md-table-row>
@@ -18,14 +18,19 @@
 
             <md-table-body>
               <md-table-row>
-                <md-table-cell>java</md-table-cell>
+                <md-table-cell>iam-server</md-table-cell>
                 <md-table-cell><code>String</code></md-table-cell>
-                <md-table-cell>메타데이터를 얻어올 자바클래스 명. e.g. <code>com.moornmo.ltms.Product</code></md-table-cell>
+                <md-table-cell>IAM 로그인을 할 uEngine IAM 서버. <code>iam.uengine.io:9090</code></md-table-cell>
+              </md-table-row>
+              <md-table-row>
+                <md-table-cell>api-key</md-table-cell>
+                <md-table-cell><code>String</code></md-table-cell>
+                <md-table-cell>uEngine IAM 서버에 등록된 client key. <a href="https://github.com/TheOpenCloudEngine/uEngine-iam"></a> 참조.</md-table-cell>
               </md-table-row>
               <md-table-row>
                 <md-table-cell>options</md-table-cell>
                 <md-table-cell><code>Object (Map)</code></md-table-cell>
-                <md-table-cell>option key-value when to render this component: keys are: <code>toolbar, sorting, editable</code></md-table-cell>
+                <md-table-cell></md-table-cell>
               </md-table-row>
             </md-table-body>
           </md-table>
@@ -40,36 +45,7 @@
           </div>
 
           <div slot="code">
-            <code-block lang="xml">
-
-             &lt;div id=&quot;app&quot;&gt;
-
-  &lt;object-form ref=&quot;object-form&quot;
-                     :java=&quot;java&quot;
-                     :data = &quot;data&quot;
-                     :event-listeners = &quot;[&apos;grid&apos;]&quot;
-             &gt;
-             &lt;/object-form&gt;
-
-             &lt;/div&gt;
-
-             &lt;script&gt;
-
-                 var app = new Vue({
-                     el: &apos;#app&apos;,
-                     data: {
-
-                         java: &quot;com.moornmo.ltms.Product&quot;,
-                         data:
-                             { curRestNum: 1,  optiNum: 1, props:[]},
-
-                     }
-                 })
-
-
-             &lt;/script&gt;
-
-            </code-block>
+            <code-block lang="xml">&lt;iam-login iam-server=&quot;http://iam.uengine.io:8080&quot; api-key=&quot;e74a9505-a811-407f-b4f6-129b7af1c703&quot; &gt;&lt;/iam-login&gt;</code-block>
           </div>
         </example-box>
 

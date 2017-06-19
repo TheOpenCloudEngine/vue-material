@@ -7,10 +7,10 @@
             <img src="assets/vue-material-example.png" alt="Model driven & Material Design">
           </div>
 
-          <div class="introduction">메타웍스4 UI 플랫폼</div>
+          <div class="introduction">메타웍스4 (a.k.a. 메타포어) UI 플랫폼</div>
 
           <md-button class="md-primary md-raised" href="#/getting-started">시작하기</md-button>
-          <md-button class="md-primary md-raised" href="https://github.com/marcosmoura/vue-material" target="_blank" rel="noopener">깃허브</md-button>
+          <md-button class="md-primary md-raised" href="https://github.com/TheOpenCloudEngine/micro-service-architecture-vuejs" target="_blank" rel="noopener">깃허브</md-button>
         </div>
 
         <div class="row">

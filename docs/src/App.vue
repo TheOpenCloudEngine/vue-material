@@ -18,25 +18,9 @@
             <router-link exact to="/getting-started">Getting Started</router-link>
           </md-list-item>
 
-          <md-list-item>
-            <span>Themes</span>
-
-            <md-list-expand>
-              <md-list>
-                <md-list-item class="md-inset">
-                  <router-link exact to="/themes/configuration">Configuration</router-link>
-                </md-list-item>
-
-                <md-list-item class="md-inset">
-                  <router-link exact to="/themes/dynamic-themes">Dynamic Theme</router-link>
-                </md-list-item>
-              </md-list>
-            </md-list-expand>
-          </md-list-item>
-
          <md-list-item>
 
-            <span>MSA Components</span>
+            <span>DDD/MSA 컴포넌트</span>
 
             <md-list-expand>
               <md-list>
@@ -49,26 +33,30 @@
                 </md-list-item>
 
                 <md-list-item class="md-inset">
-                  <router-link exact to="/components/card">IAM Login</router-link>
+                  <router-link exact to="/msacomponents/reference-picker">Reference Picker</router-link>
                 </md-list-item>
 
                 <md-list-item class="md-inset">
-                  <router-link exact to="/components/chips">IAM Menu</router-link>
+                  <router-link exact to="/msacomponents/iam-login">IAM Login</router-link>
                 </md-list-item>
 
                 <md-list-item class="md-inset">
-                  <router-link exact to="/components/file">Self Service Portal</router-link>
+                  <router-link exact to="/msacomponents/iam-menu">IAM Menu</router-link>
                 </md-list-item>
 
                 <md-list-item class="md-inset">
-                  <router-link exact to="/components/icon">Self Service Mashup</router-link>
+                  <router-link exact to="/msacomponents/self-service-portal">Self Service Portal</router-link>
+                </md-list-item>
+
+                <md-list-item class="md-inset">
+                  <router-link exact to="/msacomponents/self-service-mashup">Self Service Mashup</router-link>
                 </md-list-item>
               </md-list>
             </md-list-expand>
           </md-list-item>
 
           <md-list-item>
-            <span>Components</span>
+            <span>UI 컴포넌트</span>
 
             <md-list-expand>
               <md-list>
@@ -191,14 +179,7 @@
                 <md-list-item class="md-inset">
                   <router-link exact to="/components/whiteframe">Whiteframe</router-link>
                 </md-list-item>
-              </md-list>
-            </md-list-expand>
-          </md-list-item>
 
-          <md-list-item>
-            <span>UI Elements</span>
-            <md-list-expand>
-              <md-list>
                 <md-list-item class="md-inset">
                   <router-link exact to="/ui-elements/layout">Layout</router-link>
                 </md-list-item>
@@ -206,23 +187,46 @@
                 <md-list-item class="md-inset">
                   <router-link exact to="/ui-elements/typography">Typography</router-link>
                 </md-list-item>
+
               </md-list>
             </md-list-expand>
           </md-list-item>
 
           <md-list-item>
-            <span>Annotations</span>
+            <span>애노테이션 레퍼런스</span>
             <md-list-expand>
               <md-list>
                 <md-list-item class="md-inset">
-                  <router-link exact to="/ui-elements/layout">Layout</router-link>
+                  <router-link exact to="/annotations/face">@Face</router-link>
                 </md-list-item>
 
                 <md-list-item class="md-inset">
-                  <router-link exact to="/ui-elements/typography">Typography</router-link>
+                  <router-link exact to="/annotations/service-method">@ServiceMethod</router-link>
+                </md-list-item>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/annotations/name">@Id and @Name</router-link>
+                </md-list-item>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/annotations/order">@Order, @Hidden, @Available</router-link>
+                </md-list-item>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/annotations/children">@Children</router-link>
+                </md-list-item>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/annotations/entity">@Entity</router-link>
+                </md-list-item>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/annotations/join-column">@JoinColumn</router-link>
+                </md-list-item>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/annotations/multitenant">@Multitenant</router-link>
                 </md-list-item>
               </md-list>
             </md-list-expand>
+          </md-list-item>
+
+          <md-list-item>
+            <router-link exact to="/jpa-manual">JPA 레퍼런스</router-link>
           </md-list-item>
 
           <md-list-item>
@@ -239,6 +243,23 @@
               </md-list>
             </md-list-expand>
           </md-list-item>
+
+          <md-list-item>
+            <span>Themes</span>
+
+            <md-list-expand>
+              <md-list>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/themes/configuration">Configuration</router-link>
+                </md-list-item>
+
+                <md-list-item class="md-inset">
+                  <router-link exact to="/themes/dynamic-themes">Dynamic Theme</router-link>
+                </md-list-item>
+              </md-list>
+            </md-list-expand>
+          </md-list-item>
+
 
           <md-list-item>
             <router-link exact to="/about">About</router-link>

@@ -1,12 +1,12 @@
 <template>
-  <page-content page-title="MSAComponents - Object Form">
+  <page-content page-title="DDD/MSA Components - Reference Picker">
     <docs-component>
       <div slot="description">
-        <p>메타데이터 서비스에서 얻어온 객체 정보를 기반으로 입력폼을 자동 구성하고 Spring Hateoas 와 JPA 를 통하여 자동으로 CRUD를 수행하는 폼 컴포넌트입니다.</p>
+        <p>참조 키 값의 목록 값을 얻어와 선택할 수 있도록 해주는 셀렉트 컴포넌트.</p>
       </div>
 
       <div slot="api">
-        <api-table name="object-form">
+        <api-table name="reference-picker">
           <md-table slot="properties">
             <md-table-header>
               <md-table-row>
@@ -18,14 +18,9 @@
 
             <md-table-body>
               <md-table-row>
-                <md-table-cell>java</md-table-cell>
-                <md-table-cell><code>String</code></md-table-cell>
-                <md-table-cell>메타데이터를 얻어올 자바클래스 명. e.g. <code>com.moornmo.ltms.Product</code></md-table-cell>
-              </md-table-row>
-              <md-table-row>
                 <md-table-cell>options</md-table-cell>
                 <md-table-cell><code>Object (Map)</code></md-table-cell>
-                <md-table-cell>option key-value when to render this component: keys are: <code>toolbar, sorting, editable</code></md-table-cell>
+                <md-table-cell>option key-value when to render this component: keys are: <code>class</code></md-table-cell>
               </md-table-row>
             </md-table-body>
           </md-table>
@@ -42,32 +37,7 @@
           <div slot="code">
             <code-block lang="xml">
 
-             &lt;div id=&quot;app&quot;&gt;
 
-  &lt;object-form ref=&quot;object-form&quot;
-                     :java=&quot;java&quot;
-                     :data = &quot;data&quot;
-                     :event-listeners = &quot;[&apos;grid&apos;]&quot;
-             &gt;
-             &lt;/object-form&gt;
-
-             &lt;/div&gt;
-
-             &lt;script&gt;
-
-                 var app = new Vue({
-                     el: &apos;#app&apos;,
-                     data: {
-
-                         java: &quot;com.moornmo.ltms.Product&quot;,
-                         data:
-                             { curRestNum: 1,  optiNum: 1, props:[]},
-
-                     }
-                 })
-
-
-             &lt;/script&gt;
 
             </code-block>
           </div>
