@@ -3,83 +3,12 @@
     <div class="main-content">
       <article>
         <section>
-          <h2 class="md-headline">프론트 엔드</h2>
-
-          <p>프론트 엔드</p>
-          <code-block lang="html">
-
-&lt;div id=&quot;app&quot;&gt;
-
-    &lt;object-grid ref=&quot;grid&quot;
-            :java=&quot;java&quot;
-            :filter-key=&quot;searchQuery&quot;
-            :column-changer=&quot;columnChanger&quot;
-            :online = &quot;true&quot;
-            :data = &quot;[]&quot;
-            :options=&quot;{pagination: true, toolbar: true}&quot;
-    &gt;
-    &lt;/object-grid&gt;
-
-    &lt;md-button class=&quot;md-fab md-fab-bottom-right&quot; id=&quot;fab&quot; @click.native=&quot;$refs[&apos;dialog&apos;].open()&quot;&gt;
-        &lt;md-icon&gt;add&lt;/md-icon&gt;
-    &lt;/md-button&gt;
-
-    &lt;md-dialog md-open-from=&quot;#fab&quot; md-close-to=&quot;#fab&quot; ref=&quot;dialog&quot;&gt;
-        &lt;md-dialog-title&gt;제품 마스터 생성&lt;/md-dialog-title&gt;
-
-        &lt;md-dialog-content&gt;
-            &lt;object-form ref=&quot;object-form&quot;
-                    :java=&quot;java&quot;
-                    :data = &quot;data&quot;
-                    :event-listeners = &quot;[&apos;grid&apos;]&quot;
-            &gt;
-            &lt;/object-form&gt;
-        &lt;/md-dialog-content&gt;
-
-        &lt;md-dialog-actions&gt;
-            &lt;md-button class=&quot;md-primary&quot; @click.native=&quot;$refs[&apos;object-form&apos;].submit_(); $refs[&apos;dialog&apos;].close()&quot;&gt;저장&lt;/md-button&gt;
-            &lt;md-button class=&quot;md-primary&quot; @click.native=&quot;$refs[&apos;dialog&apos;].close()&quot;&gt;닫기&lt;/md-button&gt;
-        &lt;/md-dialog-actions&gt;
-    &lt;/md-dialog&gt;
-&lt;script&gt;
-    $( function() {
-        $(&apos;table tbody&apos;).sortable();
-        $(&apos;table tbody&apos;).disableSelection();
-    } );
-&lt;/script&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-
-    var app = new Vue({
-        el: &apos;#app&apos;,
-        data: {
-            searchQuery: &apos;&apos;,
-            java: &quot;com.moornmo.ltms.Product&quot;,
-            data:
-                { curRestNum: 1,  optiNum: 1, props:[]},
-            columnChanger: function(columns){
-                columns.push({
-                    displayName: &apos;코드&apos;,
-                    name: &apos;code&apos;,
-                    computed: function(item){
-                        return item.prodNumber + &quot;-&quot; + item.prodName + &quot;-&quot; + item.prodStandard;
-                    }
-                })
-            }
-        }
-    })
+          <h2 class="md-headline">The 1-2-3 of mw4</h2>
 
 
-&lt;/script&gt;          </code-block>
-        </section>
-      </article>
-
-      <article>
-        <h2 class="md-headline">백-엔드 개발</h2>
 
         <section>
-          <p>도메인 클래스 선언:</p>
+          <p>1. Declare the Domain Class:</p>
           <code-block lang="java">
 package com.moornmo.ltms;
 
@@ -292,14 +221,12 @@ public class Product implements BeforeSave, AfterLoad {
 
           </code-block>
         </section>
-      </article>
-
-        </section>
 
 
-        <section>
-          <p>레포지토리 선언:</p>
-          <code-block lang="java">
+
+          <section>
+            <p>2. Declare the Repository:</p>
+            <code-block lang="java">
 package com.moornmo.ltms;
 
 import org.springframework.data.jpa.repository.Query;
@@ -314,10 +241,78 @@ public interface ProductRepository extends MetaworksRepository&lt;Product, Long&
 }
 
 
-          </code-block>
-        </section>
+            </code-block>
+          </section>
 
+
+          <section>
+          <p>3. Write HTML-like page and bind it to the Domain Class: </p>
+ <code-block lang="html">
+ &lt;div id=&quot;app&quot;&gt;
+
+  &lt;object-grid ref=&quot;grid&quot;
+  :java=&quot;java&quot;
+  :filter-key=&quot;searchQuery&quot;
+  :column-changer=&quot;columnChanger&quot;
+  :online = &quot;true&quot;
+  :data = &quot;[]&quot;
+  :options=&quot;{pagination: true, toolbar: true}&quot;
+  &gt;
+  &lt;/object-grid&gt;
+
+  &lt;md-button class=&quot;md-fab md-fab-bottom-right&quot; id=&quot;fab&quot; @click.native=&quot;$refs[&apos;dialog&apos;].open()&quot;&gt;
+  &lt;md-icon&gt;add&lt;/md-icon&gt;
+  &lt;/md-button&gt;
+
+  &lt;md-dialog md-open-from=&quot;#fab&quot; md-close-to=&quot;#fab&quot; ref=&quot;dialog&quot;&gt;
+  &lt;md-dialog-title&gt;제품 마스터 생성&lt;/md-dialog-title&gt;
+
+    &lt;md-dialog-content&gt;
+      &lt;object-form ref=&quot;object-form&quot;
+      :java=&quot;java&quot;
+      :data = &quot;data&quot;
+      :event-listeners = &quot;[&apos;grid&apos;]&quot;
+      &gt;
+      &lt;/object-form&gt;
+    &lt;/md-dialog-content&gt;
+
+  &lt;md-dialog-actions&gt;
+    &lt;md-button class=&quot;md-primary&quot; @click.native=&quot;$refs[&apos;object-form&apos;].submit_(); $refs[&apos;dialog&apos;].close()&quot;&gt;저장&lt;/md-button&gt;
+    &lt;md-button class=&quot;md-primary&quot; @click.native=&quot;$refs[&apos;dialog&apos;].close()&quot;&gt;닫기&lt;/md-button&gt;
+  &lt;/md-dialog-actions&gt;
+  &lt;/md-dialog&gt;
+  &lt;/div&gt;
+
+&lt;script&gt;
+
+  var app = new Vue({
+    el: &apos;#app&apos;,
+    data: {
+      searchQuery: &apos;&apos;,
+      java: &quot;com.moornmo.ltms.Product&quot;,
+      data:
+        { curRestNum: 1,  optiNum: 1, props:[]},
+      columnChanger: function(columns){
+        columns.push({
+          displayName: &apos;코드&apos;,
+          name: &apos;code&apos;,
+          computed: function(item){
+            return item.prodNumber + &quot;-&quot; + item.prodName + &quot;-&quot; + item.prodStandard;
+          }
+        })
+      }
+    }
+  })
+
+
+&lt;/script&gt;
+   </code-block>
+          </section>
+        </section>
+      </article>
     </div>
+
+
   </page-content>
 </template>
 

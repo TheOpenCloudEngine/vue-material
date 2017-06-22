@@ -37,6 +37,7 @@
       <div slot="example">
         <example-box card-title="Default">
           <div slot="demo">
+            <img src="assets/object-form.png"/>
           </div>
 
           <div slot="code">

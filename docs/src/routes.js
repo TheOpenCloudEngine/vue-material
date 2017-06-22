@@ -43,6 +43,7 @@ const ObjectGrid = (r) => require.ensure([], () => r(require('./pages/msacompone
 const ObjectForm = (r) => require.ensure([], () => r(require('./pages/msacomponents/ObjectForm')), 'objectform');
 const IAMLogin = (r) => require.ensure([], () => r(require('./pages/msacomponents/IAMLogin')), 'iam-login');
 const ReferencePicker = (r) => require.ensure([], () => r(require('./pages/msacomponents/ReferencePicker')), 'reference-picker');
+const SelfServicePortal = (r) => require.ensure([], () => r(require('./pages/msacomponents/SelfServicePortal')), 'self-service-portal');
 
 /* Annotations*/
 const Face = (r) => require.ensure([], () => r(require('./pages/annotations/Face')), 'face');
@@ -274,6 +275,11 @@ const msacomponents = [
     path: '/msacomponents/reference-picker',
     name: 'msacomponents:ReferencePicker',
     component: ReferencePicker
+  },
+  {
+    path: '/msacomponents/self-service-portal',
+    name: 'msacomponents:SelfServicePortal',
+    component: SelfServicePortal
   }
 
 ];

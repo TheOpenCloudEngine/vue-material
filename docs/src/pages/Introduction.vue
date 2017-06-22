@@ -3,8 +3,9 @@
     <div class="main-content">
       <div class="introduction">
         <div class="button-actions">
-          <div class="example">
-            <img src="assets/vue-material-example.png" alt="Model driven & Material Design">
+          <div>
+
+            <iframe src="//www.slideshare.net/slideshow/embed_code/key/kO2U6dY1ZTyb6J" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%; height: 400px"> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/pongsor/metaworks4-intro" title="Metaworks4 intro" target="_blank">Metaworks4 intro</a> </strong> from <strong><a target="_blank" href="https://www.slideshare.net/pongsor">uEngine Solutions</a></strong> </div>
           </div>
 
           <div class="introduction">메타웍스4 (a.k.a. 메타포어) UI 플랫폼</div>

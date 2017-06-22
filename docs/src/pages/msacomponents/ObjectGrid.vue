@@ -42,6 +42,7 @@
       <div slot="example">
         <example-box card-title="Default">
           <div slot="demo">
+            <img src="assets/object-grid.png"/>
           </div>
 
           <div slot="code">
