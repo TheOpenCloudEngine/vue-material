@@ -4,18 +4,18 @@
       <md-toolbar class="vue-material-logo" md-theme="white">
         <router-link exact to="/">
           <img :src="logo" alt="Vue">
-          <span>Metaworks4</span>
+          <span>Metaworx4</span>
         </router-link>
       </md-toolbar>
 
       <div class="main-sidebar-links">
         <md-list class="md-dense">
           <md-list-item>
-            <router-link exact to="/">Introduction</router-link>
+            <router-link exact to="/">소개</router-link>
           </md-list-item>
 
           <md-list-item>
-            <router-link exact to="/getting-started">Getting Started</router-link>
+            <router-link exact to="/getting-started">시작하기</router-link>
           </md-list-item>
 
          <md-list-item>
@@ -217,6 +217,9 @@
                 </md-list-item>
                 <md-list-item class="md-inset">
                   <router-link exact to="/annotations/join-column">@JoinColumn</router-link>
+                </md-list-item>
+                <md-list-item class="md-inset">
+                  <router-link exact to="/annotations/rest-aggregator">@RestAggregator</router-link>
                 </md-list-item>
                 <md-list-item class="md-inset">
                   <router-link exact to="/annotations/multitenant">@Multitenant</router-link>

@@ -55,6 +55,7 @@ const Name = (r) => require.ensure([], () => r(require('./pages/annotations/Name
 const Entity = (r) => require.ensure([], () => r(require('./pages/annotations/Entity')), 'entity');
 const JoinColumn = (r) => require.ensure([], () => r(require('./pages/annotations/JoinColumn')), 'join-column');
 const Multitenant = (r) => require.ensure([], () => r(require('./pages/annotations/Multitenant')), 'multitenant');
+const RestAggregator = (r) => require.ensure([], () => r(require('./pages/annotations/RestAggregator')), 'rest-aggregator');
 
 /* UI Elements */
 const Typography = (r) => require.ensure([], () => r(require('./pages/ui-elements/Typography')), 'ui-elements');
@@ -339,6 +340,11 @@ const annotations = [
     path: '/annotations/join-column',
     name: 'annotations:@JoinColumn',
     component: JoinColumn
+  },
+  {
+    path: '/annotations/rest-aggregator',
+    name: 'annotations:@RestAggregator',
+    component: RestAggregator
   }
 
 

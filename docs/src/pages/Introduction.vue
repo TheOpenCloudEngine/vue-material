@@ -8,23 +8,23 @@
             <iframe src="//www.slideshare.net/slideshow/embed_code/key/kO2U6dY1ZTyb6J" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%; height: 400px"> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/pongsor/metaworks4-intro" title="Metaworks4 intro" target="_blank">Metaworks4 intro</a> </strong> from <strong><a target="_blank" href="https://www.slideshare.net/pongsor">uEngine Solutions</a></strong> </div>
           </div>
 
-          <div class="introduction">메타웍스4 (a.k.a. 메타포어) UI 플랫폼</div>
+          <div class="introduction">메타웍스4 플랫폼</div>
 
           <md-button class="md-primary md-raised" href="#/getting-started">시작하기</md-button>
-          <md-button class="md-primary md-raised" href="https://github.com/TheOpenCloudEngine/micro-service-architecture-vuejs" target="_blank" rel="noopener">깃허브</md-button>
+          <md-button class="md-primary md-raised" href="https://github.com/TheOpenCloudEngine/metaworks4" target="_blank" rel="noopener">깃허브</md-button>
         </div>
 
         <div class="row">
           <div class="column">
             <h2 class="md-headline">마이크로 서비스 아키텍처</h2>
-            <p>메타웍스4 UI 플랫폼에서 제공하는 컴포넌트들은 클라우드 기반의 특히 SaaS 애플리케이션을 개발함에 필요한 아키텍처가 이미 적용되어 있습니다.
-            클라이언트 중심의 매시업을 위한 IAM 토큰 기반 인증, 멀티테넌시를 위한 객체 정보 기반 그리드와 폼, 셀프서비스를 위한 포탈과 매시업 도구들을 제공하는 수준 높은 애플리케이션을 개발하세요.</p>
+            <p>메타웍스4 UI 플랫폼에서 제공하는 컴포넌트들은 클라우드 기반의 특히 SaaS 애플리케이션을 개발함에 필요한 MSA 아키텍처가 이미 적용되어 있습니다.
+            클라이언트 중심의 매시업을 위한 IAM 토큰 기반 인증, 멀티테넌시를 위한 객체 정보 기반 그리드와 폼, 셀프서비스를 위한 포탈과 매시업 도구, 그리고 빌링처리까지 제공하는 수준 높은 애플리케이션을 개발하세요.</p>
           </div>
 
           <div class="column">
             <h2 class="md-headline">도메인 (모델) 주도 개발</h2>
             <p>메타웍스4는 Spring Hateoas와 JPA, 그리고 기존 메타웍스2,3의 메타데이터 중심 아키텍처를 계승하여 POJO 형식의 도메인 클래스에 어노테이션을 추가하는 것 만으로 복잡한 기업용 데이터베이스 애플리케이션을 매우 높은 생산성으로 개발할 수 있습니다.
-            향후 비교할 수 없는 유지보수 편의성과 유연성을 보장하는 DDD (도메인 주도 설계)와 MDD (모델 중심 개발) 방식을 경험하세요.</p>
+            향후 비교할 수 없는 유지보수 편의성과 유연성을 보장하는 <a href="https://www.infoq.com/minibooks/domain-driven-design-quickly">DDD (도메인 주도 설계)</a>와 MDD (모델 중심 개발) 방식을 경험하세요.</p>
           </div>
 
           <div class="column">
